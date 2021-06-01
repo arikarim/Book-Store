@@ -4,10 +4,10 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import './index.css';
 import App from './App';
-import bookReducer from './reducers/book'
+import { bookReducer } from './reducers/book';
 import reportWebVitals from './reportWebVitals';
 
-export let initialState = {
+export const initialState = {
   books: {
     book1: {
       id: 1,
@@ -22,7 +22,7 @@ export let initialState = {
   },
 };
 
-const store = createStore();
+const store = createStore(bookReducer);
 ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
