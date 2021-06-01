@@ -1,5 +1,6 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
+const BOOKCATES = ["Action", "Biography", "History", "Horror", "Kids", "Learning", "Sci-Fi"]
 
 const BooksForm = (props) => (
   <form>
@@ -8,6 +9,7 @@ const BooksForm = (props) => (
     <select>
       <option>1</option>
     </select>
+    <button type="submit">submit</button>
   </form>
 );
 
