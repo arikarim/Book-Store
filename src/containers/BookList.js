@@ -2,7 +2,7 @@
 import { connect } from 'react-redux';
 // import Book from '../components/Book';
 
-const BookList = () => (
+const BookList = ({ books }) => (
   <div>
     <table>
       <thead>
@@ -13,11 +13,7 @@ const BookList = () => (
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>ok</td>
-          <td>ok</td>
-          <td>ok</td>
-        </tr>
+        {books.map((book) => <Book book={book} />)}
       </tbody>
 
     </table>

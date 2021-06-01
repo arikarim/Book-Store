@@ -1,6 +1,6 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
-const BOOKCATES = ["Action", "Biography", "History", "Horror", "Kids", "Learning", "Sci-Fi"]
+const BOOKCATES = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
 const BooksForm = (props) => (
   <form>
