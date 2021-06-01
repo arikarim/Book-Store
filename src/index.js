@@ -4,7 +4,23 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import './index.css';
 import App from './App';
+import bookReducer from './reducers/book'
 import reportWebVitals from './reportWebVitals';
+
+export let initialState = {
+  books: {
+    book1: {
+      id: 1,
+      title: 'avenger',
+      category: 'Action',
+    },
+    book2: {
+      id: 2,
+      title: 'king kong',
+      category: 'History',
+    },
+  },
+};
 
 const store = createStore();
 ReactDOM.render(
