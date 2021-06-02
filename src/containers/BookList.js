@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
-// import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
-// import Book from '../components/Book';
 
 const BookList = ({ books }) => (
   <div>
@@ -32,11 +30,5 @@ BookList.propTypes = {
 const mapStateToProps = (state) => ({
   books: state,
 });
-
-// const mapDispatchToProps = (dispatch) => (
-//   bindActionCreators({
-//     removeBook,
-//   }, dispatch)
-// );
 
 export default connect(mapStateToProps)(BookList);
