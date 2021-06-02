@@ -15,7 +15,6 @@ const BookList = ({ books }) => (
         </tr>
       </thead>
       <tbody>
-        {console.log(books)}
         {books.map((book) => (
           <Book key={book.id} book={book} />
         ))}
