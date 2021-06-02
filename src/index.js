@@ -4,10 +4,11 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import './index.css';
 import App from './components/App';
-import bookReducer from './reducers/book';
+// import bookReducer from './reducers/book';
 import reportWebVitals from './reportWebVitals';
+import combinedReducers from './reducers';
 
-const store = createStore(bookReducer);
+const store = createStore(combinedReducers);
 ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
