@@ -9,8 +9,8 @@ export const addBook = (book) => {
     payload: {
       ...book,
       id: counter,
-    }
-  }
+    },
+  };
 };
 
 export const removeBook = (book) => ({

@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
-import { bindActionCreators } from 'redux';
+// import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
 // import Book from '../components/Book';
 
-const BookList = ({ books, removeBook }) => (
+const BookList = ({ books }) => (
   <div>
     <table>
       <thead>
@@ -15,7 +15,10 @@ const BookList = ({ books, removeBook }) => (
         </tr>
       </thead>
       <tbody>
-        {/* {books.forEach((book) => <Book id={book.id} book={book} />)} */}
+        {console.log(books)}
+        {books.map((book) => (
+          <Book key={book.id} book={book} />
+        ))}
       </tbody>
 
     </table>
@@ -28,13 +31,13 @@ BookList.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  books: state.books,
+  books: state,
 });
 
-const mapDispatchToProps = dispatch => (
-  bindActionCreators({
-    removeBook: books.removeBook,
-  }, dispatch)
-)
+// const mapDispatchToProps = (dispatch) => (
+//   bindActionCreators({
+//     removeBook,
+//   }, dispatch)
+// );
 
-export default connect(mapStateToProps, mapDispatchToProps)(BookList);
+export default connect(mapStateToProps)(BookList);
