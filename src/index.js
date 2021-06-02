@@ -4,10 +4,10 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import './index.css';
 import App from './App';
-import { bookReducer } from './reducers/book';
+import { bookReducer } from './reducers';
 import reportWebVitals from './reportWebVitals';
 
-export const initialState = {
+const initialState = {
   books: {
     book1: {
       id: 1,
@@ -36,3 +36,5 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+export default initialState;

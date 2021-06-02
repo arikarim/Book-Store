@@ -1,12 +1,19 @@
 const CREATE_BOOK = 'CREATE_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
 
-export const addBook = (book) => ({
-  type: CREATE_BOOK,
-  book,
-});
+let counter = 10;
+export const addBook = (book) => {
+  counter += 1;
+  return {
+    type: CREATE_BOOK,
+    payload: {
+      ...book,
+      id: counter,
+    }
+  }
+};
 
 export const removeBook = (book) => ({
   type: REMOVE_BOOK,
-  book,
+  payload: { id: book.id },
 });

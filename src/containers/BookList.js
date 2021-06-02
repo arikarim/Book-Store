@@ -1,5 +1,6 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import Book from '../components/Book';
 // import Book from '../components/Book';
 
 const BookList = ({ books }) => (
@@ -13,7 +14,7 @@ const BookList = ({ books }) => (
         </tr>
       </thead>
       <tbody>
-        {books.map((book) => <Book book={book} />)}
+        {books.forEach((book) => <Book book={book} />)}
       </tbody>
 
     </table>
@@ -22,7 +23,7 @@ const BookList = ({ books }) => (
 );
 
 BookList.propTypes = {
-
+  books: PropTypes.objectOf(PropTypes.object).isRequired,
 };
 
 const mapStateToProps = (state) => ({

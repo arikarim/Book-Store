@@ -1,6 +1,6 @@
-import { initialState } from '../index';
+import initialState  from '../index';
 
-export const bookReducer = (state = initialState, action) => {
+const bookReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'CREATE_BOOK':
       // some actions
@@ -10,3 +10,5 @@ export const bookReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+export default bookReducer;
