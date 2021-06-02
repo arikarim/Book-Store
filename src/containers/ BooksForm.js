@@ -27,7 +27,7 @@ const BooksForm = ({ addBook }) => {
         required
       />
       <select>
-        <option>1</option>
+        {BOOKCATES.map((cate) => <option key={cate.index}>{cate}</option>)}
       </select>
       <button type="submit">submit</button>
     </form>
