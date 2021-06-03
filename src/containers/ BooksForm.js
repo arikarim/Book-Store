@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { addBook } from '../actions';
 
 export const BOOKCATES = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
@@ -14,6 +17,7 @@ const BooksForm = ({ addBook }) => {
     e.preventDefault();
     addBook(formData);
     setFormData({ title: '', category: '' });
+    e.target.reset();
   };
 
   return (
@@ -26,7 +30,13 @@ const BooksForm = ({ addBook }) => {
         onChange={handleChange}
         required
       />
-      <select>
+      <select
+        id="category"
+        name="category"
+        onChange={handleChange}
+        value={formData.category}
+        required
+      >
         {BOOKCATES.map((cate) => <option key={cate.index}>{cate}</option>)}
       </select>
       <button type="submit">submit</button>
@@ -37,5 +47,11 @@ const BooksForm = ({ addBook }) => {
 BooksForm.propTypes = {
   addBook: PropTypes.func.isRequired,
 };
-
-export default BooksForm;
+/*eslint-disable */
+const mapDispatchToProps = (dispatch) => (
+  bindActionCreators({
+    addBook: addBook,
+  }, dispatch)
+);
+/* eslint-enable */
+export default connect(null, mapDispatchToProps)(BooksForm);
