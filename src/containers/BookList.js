@@ -3,11 +3,13 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import CategoryFilter from '../components/categoryFilter';
 import Book from '../components/Book';
-import { removeBook } from '../actions';
+import { removeBook, changeFilter } from '../actions';
 
-const BookList = ({ books, removeBook }) => (
+const BookList = ({
+  books, removeBook, filter, changeFilter,
+}) => (
   <div>
-    <CategoryFilter />
+    <CategoryFilter filter={filter} handleFilterChange={changeFilter} />
     <table>
       <thead>
         <tr>
@@ -30,15 +32,26 @@ const BookList = ({ books, removeBook }) => (
 BookList.propTypes = {
   books: PropTypes.objectOf(PropTypes.object).isRequired,
   removeBook: PropTypes.func.isRequired,
+  changeFilter: PropTypes.func.isRequired,
+  filter: PropTypes.string.isRequired,
+};
+
+const getFilteredBooks = ({ books, filter }) => {
+  if (filter === 'All') {
+    return books;
+  }
+  return books.filter(({ category }) => category === filter);
 };
 
 const mapStateToProps = (state) => ({
-  books: state.books,
+  books: getFilteredBooks(state),
+  filter: state.filter,
 });
 
 const mapDispatchToProps = (dispatch) => (
   bindActionCreators({
     removeBook,
+    changeFilter,
   }, dispatch)
 );
 

@@ -1,4 +1,4 @@
-const initialFilterState = 'ALL';
+const initialFilterState = 'All';
 
 const filterReducer = (state = initialFilterState, action) => {
   switch (action.type) {
