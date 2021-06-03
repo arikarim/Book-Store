@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import CategoryFilter from '../components/categoryFilter';
 import Book from '../components/Book';
 import { removeBook } from '../actions';
 
 const BookList = ({ books, removeBook }) => (
   <div>
+    <CategoryFilter />
     <table>
       <thead>
         <tr>
