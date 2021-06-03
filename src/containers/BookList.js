@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import Book from '../components/Book';
+import { removeBook } from '../actions';
 
-const BookList = ({ books }) => (
+const BookList = ({ books, removeBook }) => (
   <div>
     <table>
       <thead>
@@ -14,7 +16,7 @@ const BookList = ({ books }) => (
       </thead>
       <tbody>
         {books.map((book) => (
-          <Book key={book.id} book={book} />
+          <Book key={book.id} book={book} handleRemove={() => removeBook(book)} />
         ))}
       </tbody>
 
@@ -25,10 +27,17 @@ const BookList = ({ books }) => (
 
 BookList.propTypes = {
   books: PropTypes.objectOf(PropTypes.object).isRequired,
+  removeBook: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
   books: state.books,
 });
 
-export default connect(mapStateToProps)(BookList);
+const mapDispatchToProps = (dispatch) => (
+  bindActionCreators({
+    removeBook,
+  }, dispatch)
+);
+
+export default connect(mapStateToProps, mapDispatchToProps)(BookList);
