@@ -9,7 +9,11 @@ const BookList = ({
   books, removeBook, filter, changeFilter,
 }) => (
   <div>
-    <CategoryFilter filter={filter} handleFilterChange={changeFilter} />
+    <div className="d-flex">
+      <span className="logo">Bookstore CMS</span>
+      <span className="book">Books</span>
+      <CategoryFilter filter={filter} handleFilterChange={changeFilter} />
+    </div>
     <table>
       <thead>
         <tr>
