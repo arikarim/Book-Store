@@ -15,32 +15,40 @@ const BooksForm = ({ addBook }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addBook(formData);
-    setFormData({ title: '', category: '' });
-    e.target.reset();
+    if (formData.title && formData.category) {
+      addBook(formData);
+      setFormData({ title: '', category: '' });
+      e.target.reset();
+    }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        id="title"
-        type="text"
-        name="title"
-        placeholder="Title"
-        onChange={handleChange}
-        required
-      />
-      <select
-        id="category"
-        name="category"
-        onChange={handleChange}
-        value={formData.category}
-        required
-      >
-        {BOOKCATES.map((cate) => <option key={cate.index}>{cate}</option>)}
-      </select>
-      <button type="submit">submit</button>
-    </form>
+    <div className="container my-5">
+      <h3 className="form-title mx-2 my-3">ADD NEW BOOK</h3>
+      <form className="container d-flex justify-content-between" onSubmit={handleSubmit}>
+        <input
+          className="form-control"
+          id="title"
+          type="text"
+          name="title"
+          placeholder="Title"
+          onChange={handleChange}
+          required
+        />
+        <select
+          className="col-3 mx-3 cate-select"
+          id="category"
+          name="category"
+          onChange={handleChange}
+          value={formData.category}
+          required
+        >
+          <option>Category</option>
+          {BOOKCATES.map((cate) => <option key={cate.index}>{cate}</option>)}
+        </select>
+        <button className="form-btn btn btn-primary col-2" type="submit">ADD BOOK</button>
+      </form>
+    </div>
   );
 };
 
