@@ -40,6 +40,16 @@
   margin-bottom: 30px;
 }
 
+.cates {
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+  background-color: white;
+  color: rgb(226, 221, 221);
+}
+
 /* Progress  */
 
 .progress {

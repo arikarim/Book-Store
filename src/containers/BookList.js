@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { BsFillPersonFill } from 'react-icons/bs';
 import CategoryFilter from '../components/categoryFilter';
 import Book from '../components/Book';
 import { removeBook, changeFilter } from '../actions';
@@ -8,12 +9,19 @@ import { removeBook, changeFilter } from '../actions';
 const BookList = ({
   books, removeBook, filter, changeFilter,
 }) => (
-  <div>
-    <div className="navbarr d-flex align-content-center">
-      <span className="logo mx-3 py-3">Bookstore CMS</span>
-      <span className="book mx-3 my-auto">Books</span>
-      <div className="mx-3 my-auto">
-        <CategoryFilter filter={filter} handleFilterChange={changeFilter} />
+  <div className="">
+    <div className="navbarr">
+      <div className="container d-flex justify-content-between">
+        <div className=" d-flex align-content-center">
+          <span className="logo py-3">Bookstore CMS</span>
+          <span className="book mx-3 my-auto">BOOKS</span>
+          <div className="cates mx-3 my-auto">
+            <CategoryFilter filter={filter} handleFilterChange={changeFilter} />
+          </div>
+        </div>
+        <div className="self-icon my-auto">
+          <BsFillPersonFill />
+        </div>
       </div>
     </div>
     <div className="container">
