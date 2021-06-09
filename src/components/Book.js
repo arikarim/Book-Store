@@ -13,21 +13,19 @@ const Book = ({ book, handleRemove }) => (
         <span>Edit</span>
       </div>
     </div>
-    <div className="progress my-auto">
-      <div className="d-flex">
-        <span className="">
-          <ImSpinner8 />
-        </span>
-        <div className="d-flex flex-column my-auto">
-          <span>%64</span>
-          <span>Completed</span>
-        </div>
+    <div className="progress my-auto gap-3 justify-content-between  d-flex">
+      <span className="p1">
+        <ImSpinner8 />
+      </span>
+      <div className="p2 d-flex flex-column my-auto">
+        <h3>%64</h3>
+        <span>Completed</span>
       </div>
     </div>
     <div className="chapter my-auto d-flex flex-column">
-      <span>Current Chapter</span>
-      <span>Chapter</span>
-      <button type="button">Update Progress</button>
+      <span>CURRENT CHAPTER</span>
+      <p>Chapter 99</p>
+      <button className="btn btn-primary" type="button">UPDATE PROGRESS</button>
     </div>
   </div>
 );

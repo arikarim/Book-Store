@@ -39,3 +39,35 @@
   border-bottom: 1px solid rgb(226, 221, 221);
   margin-bottom: 30px;
 }
+
+/* Progress  */
+
+.progress {
+  height: 100%;
+  background-color: white;
+}
+
+.progress .p1 {
+  color: rgb(102, 179, 230);
+}
+
+.p1{
+  font-size: 68px;
+}
+
+.p2 h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.chapter span {
+  font-size: 15px;
+}
+
+.chapter p {
+  font-size: 15px;
+}
+
+.chapter button {
+  font-size: 15px;
+}
