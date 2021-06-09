@@ -31,7 +31,6 @@
   border: none;
   border-right: 1px solid rgb(226, 221, 221);
   border-left: 1px solid rgb(226, 221, 221);
-
   background-color: white;
 }
 
@@ -57,12 +56,12 @@
   background-color: white;
 }
 
-.progress .p1 {
-  color: rgb(102, 179, 230);
+.p1 {
+  font-size: 68px;
 }
 
-.p1{
-  font-size: 68px;
+.progress .p1 {
+  color: rgb(102, 179, 230);
 }
 
 .p2 h3 {
@@ -93,12 +92,4 @@
 
 .form-title {
   color: rgb(187, 187, 187);
-}
-
-.cate-select {
-
-}
-
-.form-btn {
-  
 }
