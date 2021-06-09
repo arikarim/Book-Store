@@ -55,11 +55,11 @@ const BooksForm = ({ addBook }) => {
 BooksForm.propTypes = {
   addBook: PropTypes.func.isRequired,
 };
-/*eslint-disable */
+
 const mapDispatchToProps = (dispatch) => (
   bindActionCreators({
-    addBook: addBook,
+    addBook,
   }, dispatch)
 );
-/* eslint-enable */
+
 export default connect(null, mapDispatchToProps)(BooksForm);
