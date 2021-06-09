@@ -12,8 +12,4 @@ const categoryFilter = ({ filter, handleFilterChange }) => (
   </select>
 );
 
-categoryFilter.propTypes = {
-
-};
-
 export default categoryFilter;
