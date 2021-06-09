@@ -1,5 +1,5 @@
 .logo {
-  color: blue;
+  color: rgba(65, 154, 249, 0.99);
   font-size: 30px;
   font-weight: bolder;
 }
@@ -80,4 +80,13 @@
 
 .chapter button {
   font-size: 15px;
+}
+
+/* person icon */
+
+.self-icon {
+  border: 1px solid rgb(226, 221, 221);
+  border-radius: 50%;
+  width: 30px;
+  color: rgba(65, 154, 249, 0.99);
 }

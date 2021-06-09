@@ -19,7 +19,7 @@ const BookList = ({
             <CategoryFilter filter={filter} handleFilterChange={changeFilter} />
           </div>
         </div>
-        <div className="self-icon my-auto">
+        <div className="self-icon text-center my-auto">
           <BsFillPersonFill />
         </div>
       </div>
