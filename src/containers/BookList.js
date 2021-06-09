@@ -9,10 +9,12 @@ const BookList = ({
   books, removeBook, filter, changeFilter,
 }) => (
   <div>
-    <div className="d-flex">
-      <span className="logo">Bookstore CMS</span>
-      <span className="book">Books</span>
-      <CategoryFilter filter={filter} handleFilterChange={changeFilter} />
+    <div className="navbarr col-md-10 d-flex align-content-center">
+      <span className="logo mx-3 py-3">Bookstore CMS</span>
+      <span className="book mx-3 my-auto">Books</span>
+      <div className="mx-3 my-auto">
+        <CategoryFilter filter={filter} handleFilterChange={changeFilter} />
+      </div>
     </div>
     <table>
       <thead>
