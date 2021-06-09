@@ -9,7 +9,7 @@ const BookList = ({
   books, removeBook, filter, changeFilter,
 }) => (
   <div>
-    <div className="navbarr col-md-10 d-flex align-content-center">
+    <div className="navbarr d-flex align-content-center">
       <span className="logo mx-3 py-3">Bookstore CMS</span>
       <span className="book mx-3 my-auto">Books</span>
       <div className="mx-3 my-auto">

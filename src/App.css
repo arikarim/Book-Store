@@ -4,8 +4,35 @@
   font-weight: bolder;
 }
 
-.book {
- 
+.book-card {
+  margin: 20px 0;
+  border: 1px solid rgb(226, 221, 221);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.book-card span {
+  color: gray;
+  font-weight: 400;
+}
+
+.card-book {
+  margin: 5px 0;
+}
+
+.card-book span {
+  margin: 0 10px;
+  color: rgb(102, 179, 230);
+}
+
+.card-book button {
+  margin: 0 10px;
+  color: rgb(102, 179, 230);
+  border: none;
+  border-right: 1px solid rgb(226, 221, 221);
+  border-left: 1px solid rgb(226, 221, 221);
+
+  background-color: white;
 }
 
 .navbarr {

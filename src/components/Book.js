@@ -7,9 +7,7 @@ const Book = ({ book, handleRemove }) => (
     <h2>{book.title}</h2>
     <div className="card-book d-flex">
       <span>Comments</span>
-      |
       <button onClick={() => handleRemove(book)} type="button">Remove</button>
-      |
       <span>Edit</span>
     </div>
   </div>
