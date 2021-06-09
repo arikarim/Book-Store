@@ -1,10 +1,10 @@
 import { BOOKCATES } from '../containers/ BooksForm';
 
 const initialState = [
-  { id: 1, title: 'Book 1', category: BOOKCATES[0] },
-  { id: 2, title: 'Book 2', category: BOOKCATES[2] },
-  { id: 3, title: 'Book 3', category: BOOKCATES[1] },
-  { id: 4, title: 'Book 4', category: BOOKCATES[3] },
+  { id: 1, title: 'Avengers', category: BOOKCATES[0] },
+  { id: 2, title: 'Red Clif', category: BOOKCATES[2] },
+  { id: 3, title: 'Gambol', category: BOOKCATES[4] },
+  { id: 4, title: 'Walking Dead', category: BOOKCATES[3] },
 ];
 
 const bookReducer = (state = initialState, action) => {

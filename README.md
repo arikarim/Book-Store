@@ -1,9 +1,9 @@
 # Book Store
 
-Basic Setup for Book store project
+Bookstore project, users can create books where they give the book a title and a category, and they can remove  the books.
 ## Screenshots of the app.
 
-<!-- ![image](./src/img/screen.png) -->
+![image](./src/img/screen.png)
 
 
 
